@@ -1,6 +1,9 @@
 import React from "react";
 
 const Card = ({ image, title }) => {
+  if (image) {
+    throw new Error("Image not provided!");
+  }
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden w-64">
       <img className="w-full h-40 object-cover" src={image} alt={title} />
